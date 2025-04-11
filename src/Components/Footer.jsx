@@ -18,7 +18,7 @@ function Footer() {
             <div className="row p-4 justify-content-center">
                 <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
                     <div className="text-center text-md-start">
-                        <Link to="/">
+                        <Link to="/wattwizards-platform">
                             <img
                                 src={logo}
                                 alt="Logo"
@@ -34,22 +34,22 @@ function Footer() {
                     <h5 className="text-uppercase text-light mb-4">Services</h5>
                     <ul className="list-unstyled">
                         <li className='mb-3'>
-                            <Link to="/programs">
+                            <Link to="/wattwizards-platform/programs">
                                 {data.services['available-programs']}
                             </Link>
                         </li>
                         <li className='mb-3'>
-                            <Link to="/workspace">
+                            <Link to="/wattwizards-platform/workspace">
                                 {data.services['electrical-circuit-analysis']}
                             </Link>
                         </li>
                         <li className='mb-3'>
-                            <Link to="/vault">
+                            <Link to="/wattwizards-platform/vault">
                                 {data.services['energy-consumption-monitoring']}
                             </Link>
                         </li>
                         <li className='mb-3'>
-                            <Link to="/achievments">
+                            <Link to="/wattwizards-platform/achievments">
                                 {data.services['achievments']}
                             </Link>
                         </li>
