@@ -25,12 +25,12 @@ import NotFound from "./Components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/wattwizards-platform",
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Homepage /> },
-      { path: "WattWizards", element: <Homepage /> },
+      { path: "wattwizards-platform", element: <Homepage /> },
       { path: "homepage", element: <Homepage /> },
       { path: "programs", element: <Programs /> },
       { path: "achievments", element: <Achievments /> },

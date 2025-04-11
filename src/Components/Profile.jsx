@@ -144,7 +144,7 @@ function Profile() {
               className='d-block'>
                 <button className='btn mb-2 justify-content-center'>User Manual</button>
               </a>
-              <Link to="/project" className='btn btn-primary'>DevSync</Link>
+              <Link to="/wattwizards-platform/project" className='btn btn-primary'>Project Manager</Link>
 
               {/* Change Image */}
               {editing && (

@@ -18,15 +18,15 @@ function Header() {
     const handleLogout = () => {
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         setIsLoggedIn(false);
-        navigate('/');    
+        navigate('/wattwizards-platform');    
     };
 
     const routes = [
-        { path: '/programs', name: 'Programs' },
-        { path: '/workspace', name: 'Workspace' },
-        { path: '/products', name: 'Products' },
-        { path: '/profile', name: 'Profile' },
-        { path: isLoggedIn ? '/' : '/login', name: isLoggedIn ? 'Logout' : 'Login' },
+        { path: 'programs', name: 'Programs' },
+        { path: 'workspace', name: 'Workspace' },
+        { path: 'products', name: 'Products' },
+        { path: 'profile', name: 'Profile' },
+        { path: isLoggedIn ? '/wattwizards-platform' : '/wattwizards-platform/login', name: isLoggedIn ? 'Logout' : 'Login' },
     ];
 
     useEffect(() => {
@@ -59,26 +59,22 @@ function Header() {
 
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && selectedIndex >= 0 && selectedIndex < filteredResults.length) {
-            // Trigger navigation for the selected result
             handleSearchSelect(filteredResults[selectedIndex].path);
         } else if (e.key === 'ArrowDown' && selectedIndex < filteredResults.length - 1) {
-            // Move selection down
             setSelectedIndex(prevIndex => prevIndex + 1);
         } else if (e.key === 'ArrowUp' && selectedIndex > 0) {
-            // Move selection up
             setSelectedIndex(prevIndex => prevIndex - 1);
         }
     };
 
     const handleMouseEnter = (index) => {
-        // Highlight item when mouse hovers over it
         setSelectedIndex(index);
     };
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark p-4 fixed-top shadow-sm">
             <div className="container">
-                <Link className='navbar-brand text-light' to='/'>
+                <Link className='navbar-brand text-light' to='/wattwizards-platform'>
                     <strong>WattWizards</strong>
                 </Link>
                 <button 
@@ -127,7 +123,7 @@ function Header() {
                                 aria-label="Search"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                onKeyDown={handleKeyDown} // Handle key press for navigation and selection
+                                onKeyDown={handleKeyDown}
                             />
                             {searchTerm && (
                                 <ul className="list-group position-absolute bg-white shadow w-100 rounded" style={{ top: '100%', left: 0, zIndex: 1050 }}>
@@ -137,7 +133,7 @@ function Header() {
                                                 className={`list-group-item list-group-item-action ${selectedIndex === index ? 'bg-primary text-light' : ''}`} 
                                                 key={index} 
                                                 onClick={() => handleSearchSelect(result.path)}
-                                                onMouseEnter={() => handleMouseEnter(index)} // Highlight on hover
+                                                onMouseEnter={() => handleMouseEnter(index)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {result.name}
