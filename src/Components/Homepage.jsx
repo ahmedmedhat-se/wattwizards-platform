@@ -11,11 +11,9 @@ function Homepage() {
                         <div className='CodeCrafters-desc'>
                             <h2>PNTI Teams</h2>
                             <p className="fw-bold fs-5">
-                                WattWizards, developed by the PNTI Teams, is an innovative web application that addresses key challenges in electrical engineering. 
-                                It simplifies circuit analysis, minimizes errors, and offers tools for project management, inventory, and both online/offline workspaces. 
-                                As Egypt’s first platform of its kind targeting a broad audience, 
-                                it’s powered by a high-performance server and has earned national awards, 
-                                international recognition, and a place among the top 1,000 global projects.
+                                “WattWizards—Egypt’s first all-in-one circuit analysis platform—turns complex engineering into click-and-go simplicity. 
+                                Built by PNTI Teams, it’s award-winning, globally ranked, and built to power precision, 
+                                anywhere—online or off.”
                             </p>
                         </div>
                         <div className="CodeCrafters-img">

@@ -104,7 +104,7 @@ function Programs() {
         <section className="cards-lg-containers" id="Programs" ref={programsRef}>
             <header className="section-header">
                 <div className="header-text">
-                    <h1>Our Programs</h1>
+                    <h1>WattWizards Programs</h1>
                     <p className="text-dark fw-bold">
                         These programs that we designed,
                         you can now view our scientific and research documents

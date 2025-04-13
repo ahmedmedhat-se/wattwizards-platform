@@ -165,8 +165,8 @@ const OnlineSheets = () => {
                 <button className="btn btn-primary" onClick={submitData}>
                     Submit
                 </button>
-                <Link className='btn btn-primary me-2' to="/workspace">Workspace</Link>
-                <Link className='btn btn-primary' to="/vault">Archive</Link>
+                <Link className='btn btn-primary me-2' to="/wattwizards-platform/workspace">Workspace</Link>
+                <Link className='btn btn-primary' to="/wattwizards-platform/vault">Archive</Link>
             </div>
         </div>
     );

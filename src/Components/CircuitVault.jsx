@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CircuitVault = () => {
   const navigate = useNavigate();
@@ -80,7 +80,7 @@ const CircuitVault = () => {
 
   return (
     <div id='workspace' className="container text-light">
-      <h2 className="mt-4">CircuitVault</h2>
+      <h2 className="mt-4">WattWizards Archive</h2>
 
       <form onSubmit={handleFileUpload} className="mb-4">
         <div className="mb-3">
@@ -93,6 +93,8 @@ const CircuitVault = () => {
           />
         </div>
         <button type="submit" className="btn btn-primary">Upload Files</button>
+        <Link className='btn btn-primary me-2' to="/wattwizards-platform/workspace">Offline Workspace</Link>
+        <Link className='btn btn-primary' to="/wattwizards-platform/online-sheets">Online Workspace</Link>
       </form>
 
       {files.length > 0 && (

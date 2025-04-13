@@ -11,9 +11,9 @@ const SparkTalk = () => {
     const navigate = useNavigate();
 
     const routes = [
-        { path: '/', name: 'Home' },
-        { path: '/', name: 'WattWizards' },
-        { path: '/programs', name: 'Programs' },
+        { path: '/wattwizards-platform', name: 'Home' },
+        { path: '/wattwizards-platform', name: 'WattWizards' },
+        { path: '/wattwizards-platform/programs', name: 'Programs' },
         { path: '/workspace', name: 'Workspace' },
         { path: '/vault', name: 'CircuitVault' },
         { path: '/login', name: 'Login' },

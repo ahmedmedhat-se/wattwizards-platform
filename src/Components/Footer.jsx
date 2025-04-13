@@ -5,6 +5,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import data from './Env/data.json';
 import logo from './assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
+import { faMailForward } from '@fortawesome/free-solid-svg-icons/faMailForward';
 
 function Footer() {
     const location = useLocation();
@@ -65,6 +66,10 @@ function Footer() {
                     <p className="text-light mb-2">
                         <FontAwesomeIcon icon={faPhone} className="me-2" />
                         {data.company.contact.phone}
+                    </p>
+                    <p className="text-light mb-2">
+                        <FontAwesomeIcon icon={faMailForward} className="me-2" />
+                        contact@wattwizards.com
                     </p>
                     <div className="links">
                         <a

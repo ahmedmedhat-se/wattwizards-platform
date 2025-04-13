@@ -97,7 +97,7 @@ function ProjectManager() {
 
     return (
         <div id="projectManager" className="container">
-            <h2>DevSync</h2>
+            <h2>WattWizards Project Manager</h2>
 
             {/* Project Form */}
             <form onSubmit={handleSubmit} className="mb-4">

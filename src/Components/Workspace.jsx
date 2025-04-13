@@ -71,9 +71,9 @@ const Workspace = () => {
   return (
     <div id='workspace' className="container">
       <div className="container-fluid p-0 m-0 d-flex justify-content-between">
-        <h2>Workspace</h2>
+        <h2>WattWizards Workspace</h2>
       </div>
-      <Link className='btn btn-primary mb-2 mt-2' to="/online-sheets">Online Sheets</Link>
+      <Link className='btn btn-primary mb-2 mt-2' to="/wattwizards-platform/online-sheets">Online Sheets</Link>
 
       <form onSubmit={handleFileUpload} className="mb-4">
         <div className="mb-3">
@@ -118,7 +118,7 @@ const Workspace = () => {
         
         <button type="submit" className="btn btn-primary">Upload Files</button>
 
-        <Link className='btn btn-primary' to="/vault">Archive</Link>
+        <Link className='btn btn-primary' to="/wattwizards-platform/vault">Archive</Link>
       </form>
     </div>
   );
