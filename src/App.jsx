@@ -16,6 +16,7 @@ import Profile from "./Components/Profile.jsx";
 
 // Premium (Added Value) Pages
 import ProjectManager from "./Components/Dev/ProjectManager.jsx";
+import EditProject from "./Components/Dev/EditProject.jsx";
 import OnlineSheets from "./Components/OnlineSheets.jsx";
 import Products from "./Components/Context/Products.jsx";
 import Cart from "./Components/Context/Cart.jsx";
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       { path: "profile", element: <Profile /> },
       { path: "online-sheets", element: <OnlineSheets /> },
       { path: "project", element: <ProjectManager /> },
+      { path: "edit-project", element: <EditProject /> },
       { path: "products", element: <Products /> },
       { path: "cart", element: <Cart /> },
     ],
