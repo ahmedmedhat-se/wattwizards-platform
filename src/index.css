@@ -20,6 +20,7 @@ html {
   --bg-clr-1: #ffffff;
   --dark-heading-clr: #071324;
   --dark-text-clr: #fff;
+  --electric-clr: #0066ff;
   --light-heading-clr: #fff;
   --light-text-clr: #fff;
 }
@@ -106,6 +107,12 @@ nav .navbar-brand strong, .navbar .offcanvas-end .offcanvas-title {
   font-family: 'Orbitron', sans-serif;
 }
 
+nav .navbar-brand strong span {
+  color: var(--electric-clr);
+  font-size: 22px;
+  font-family: 'Orbitron', sans-serif;
+}
+
 nav .offcanvas-body .navbar-nav .nav-item .nav-link {
   color: #fff;
   font-size: 16px;
@@ -135,7 +142,7 @@ nav .nav-link::before {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #420d43;
+  background-color: var(--electric-clr);
   transition: width 0.3s ease-in-out;
 }
 
@@ -144,7 +151,7 @@ nav .nav-link:hover::before {
 }
 
 nav .nav-link:hover {
-  color: #420d43;
+  color: var(--electric-clr);
   transform: scale(1.05);
   transition: transform 0.3s ease-in-out;
 }
@@ -191,6 +198,11 @@ nav .nav-link:hover {
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Orbitron', sans-serif;
+}
+
+.userInfo-container button:hover {
+  background-color: var(--electric-clr);
+  color: var(--primary-clr);
 }
 
 .userInfo-container p {
@@ -269,7 +281,7 @@ nav .nav-link:hover {
 
 .SparkTalk header {
   display: flex;
-  background-color: #0f0845;
+  background-color: var(--electric-clr);
   color: #fff;
   justify-content: space-between;
   border-radius: 10px;
@@ -317,7 +329,7 @@ nav .nav-link:hover {
 }
 
 .message.outgoing p {
-  background-color: #0f0845;
+  background-color: var(--electric-clr);
   color: white;
   font-weight: bold;
   overflow: hidden;
@@ -352,7 +364,7 @@ nav .nav-link:hover {
 .home-landing {
   width: 100%;
   margin: 0 auto;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
 section.home {
@@ -367,7 +379,7 @@ section.home {
   }
 }
 
-.home .CodeCrafters {
+.home .XOperations {
   width: 100%;
   padding: 100px 8% 0;
   display: flex;
@@ -376,7 +388,7 @@ section.home {
   background-color: #fff;
 }
 
-.home .CodeCrafters .CodeCrafters-desc {
+.home .XOperations .XOperations-desc {
   position: relative;
   flex-basis: 50%;
   max-width: 700px;
@@ -384,13 +396,13 @@ section.home {
 }
 
 section h2 {
-  color: var(--light-heading-clr);
+  color: var(--electric-clr);
   font-family: 'Orbitron', sans-serif;
 }
 
-.CodeCrafters .CodeCrafters-desc h2 {
+.XOperations .XOperations-desc h2 {
   font-size: 48px;
-  color: #7170d7;
+  color: var(--electric-clr);
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 1.4;
@@ -398,13 +410,13 @@ section h2 {
   font-family: 'Orbitron', sans-serif;
 }
 
-.CodeCrafters .CodeCrafters-desc p {
+.XOperations .XOperations-desc p {
   color: #000;
   line-height: 1.4;
   margin-bottom: 50px;
 }
 
-.home .CodeCrafters .CodeCrafters-img {
+.home .XOperations .XOperations-img {
   position: relative;
   flex-basis: 50%;
   display: flex;
@@ -412,18 +424,18 @@ section h2 {
   z-index: 1;
 }
 
-.CodeCrafters-img .CodeCrafters-img-container {
+.XOperations-img .XOperations-img-container {
   position: relative;
   width: 400px;
   z-index: 2;
 }
 
-.CodeCrafters-img .CodeCrafters-img-container img {
+.XOperations-img .XOperations-img-container img {
   width: 100%;
   height: auto;
 }
 
-.CodeCrafters .box div {
+.XOperations .box div {
   position: absolute;
   width: 50px;
   height: 50px;
@@ -432,61 +444,61 @@ section h2 {
   border-radius: 50%;
 }
 
-.CodeCrafters .box div:nth-child(1) {
+.XOperations .box div:nth-child(1) {
   top: 12%;
   left: 42%;
   animation: animate 10s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(2) {
+.XOperations .box div:nth-child(2) {
   top: 70%;
   left: 50%;
   animation: animate 7s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(3) {
+.XOperations .box div:nth-child(3) {
   top: 17%;
   left: 6%;
   animation: animate 9s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(4) {
+.XOperations .box div:nth-child(4) {
   top: 20%;
   left: 60%;
   animation: animate 10s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(5) {
+.XOperations .box div:nth-child(5) {
   top: 67%;
   left: 10%;
   animation: animate 6s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(6) {
+.XOperations .box div:nth-child(6) {
   top: 80%;
   left: 70%;
   animation: animate 12s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(7) {
+.XOperations .box div:nth-child(7) {
   top: 60%;
   left: 80%;
   animation: animate 15s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(8) {
+.XOperations .box div:nth-child(8) {
   top: 32%;
   left: 25%;
   animation: animate 16s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(9) {
+.XOperations .box div:nth-child(9) {
   top: 90%;
   left: 25%;
   animation: animate 9s linear infinite;
 }
 
-.CodeCrafters .box div:nth-child(10) {
+.XOperations .box div:nth-child(10) {
   top: 20%;
   left: 80%;
   animation: animate 5s linear infinite;
@@ -592,7 +604,7 @@ section.features {
 
 .features-box .features-desc h2 {
   margin-bottom: 10px;
-  color: var(--primary-light-clr);
+  color: var(--electric-clr);
   font-size: 22px;
 }
 
@@ -634,6 +646,7 @@ section.features {
 section.cards-lg-containers {
   width: 100%;
   padding: 100px 8% 0;
+  animation: slideInUp 1s ease-in-out;
 }
 
 .cards-lg-containers .section-header {
@@ -652,6 +665,12 @@ section.cards-lg-containers {
   right: 0;
   bottom: 40px;
   padding: 10px 26px;
+  background-color: var(--dark-heading-clr);
+  color: var(--light-text-clr);
+}
+.cards-lg-containers .section-header .cards-lg-containers-btn:hover {
+  background-color: var(--electric-clr);
+  color: #000;
 }
 
 .cards-lg-containers .cards-lg-containers-contents {
@@ -660,22 +679,32 @@ section.cards-lg-containers {
   flex-wrap: wrap;
 }
 
+.cards-lg-containers .cards-lg-containers-contents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5%; /* Better spacing between cards */
+  justify-content: space-between;
+}
+
 .cards-lg-containers .cards-lg-containers-contents .cards-lg-containers-card {
-  flex-basis: calc(calc(100% / 3) - 1.2%);
-  border: 1px solid #eee;
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 20px;
+  flex-basis: calc(33.333% - 1.5%);
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
 }
 
 .cards-lg-containers .cards-lg-containers-contents .cards-lg-containers-card:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-}
-
-.card:hover {
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.795);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: #d6d6d6;
+  background: linear-gradient(135deg, #f0f8ff, #e6f2ff);
 }
 
 .cards-lg-containers-contents .cards-lg-containers-card img {
@@ -713,7 +742,7 @@ section.cards-lg-containers {
 .cards-lg-containers-card .category .subject h3 {
   font-size: 18px;
   font-weight: 500;
-  color: var(--primary-clr);
+  color: var(--electric-clr);
 }
 
 .cards-lg-containers-card .course-title {
@@ -780,7 +809,7 @@ section.cards-lg-containers {
 }
 
 #community h2 {
-  color: var(--light-heading-clr);
+  color: var(--electric-clr);
   font-family: 'Orbitron', sans-serif;
 }
 
@@ -805,6 +834,7 @@ section.cards-lg-containers {
   border-radius: 10px;
   background-color: #071324;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  animation: slideInUp 1s ease-in-out;
 }
 
 @media(max-width: 768px) {
@@ -881,18 +911,18 @@ footer .links a{
 @media(max-width: 968px) {
 
   /* Home Section */
-  .home .CodeCrafters {
+  .home .XOperations {
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: flex-start;
   }
 
-  .home .CodeCrafters .CodeCrafters-desc,
-  .home .CodeCrafters .CodeCrafters-img {
+  .home .XOperations .XOperations-desc,
+  .home .XOperations .XOperations-img {
     flex-basis: 100%;
   }
 
-  .home .CodeCrafters .CodeCrafters-img {
+  .home .XOperations .XOperations-img {
     align-self: center;
     margin-bottom: 50px;
   }
@@ -936,7 +966,7 @@ footer .links a{
     padding: 100px 8% 70px;
   }
 
-  .CodeCrafters .CodeCrafters-desc h2 {
+  .XOperations .XOperations-desc h2 {
     font-size: 42px;
   }
 }
@@ -983,15 +1013,15 @@ footer .links a{
 }
 
 @media(max-width: 468px) {
-  .CodeCrafters-img .CodeCrafters-img-container {
+  .XOperations-img .XOperations-img-container {
     width: 100%;
   }
 
-  .CodeCrafters .CodeCrafters-desc .search-bar {
+  .XOperations .XOperations-desc .search-bar {
     width: 100%;
   }
 
-  .CodeCrafters .CodeCrafters-desc h2 {
+  .XOperations .XOperations-desc h2 {
     font-size: 32px;
   }
 }

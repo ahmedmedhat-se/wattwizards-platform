@@ -75,7 +75,7 @@ function Header() {
         <nav className="navbar navbar-expand-lg navbar-dark p-4 fixed-top shadow-sm">
             <div className="container">
                 <Link className='navbar-brand text-light' to='/wattwizards-platform'>
-                    <strong>WattWizards</strong>
+                    <strong>Watt<span>Wizards</span></strong>
                 </Link>
                 <button 
                     className="navbar-toggler" 
