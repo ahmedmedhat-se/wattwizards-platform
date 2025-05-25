@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import "../styles/SparkTalk.css";
 
 const SparkTalk = () => {
     const [isChatVisible, setIsChatVisible] = useState(false);

@@ -1,32 +1,33 @@
-import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { ProductProvider } from "./Components/Context/ProductContext.jsx";
 
 // Layout
-import MainLayout from "./Components/Layout/MainLayout.jsx";
+import MainLayout from "./components/layout/MainLayout.jsx";
 
 // Public Pages
-import Homepage from "./Components/Homepage.jsx";
-import Programs from "./Components/Programs.jsx";
-import Achievments from "./Components/Achievments.jsx";
-import Workspace from "./Components/Workspace.jsx";
-import CircuitVault from "./Components/CircuitVault.jsx";
-import Userin from "./Components/Userin.jsx";
-import Profile from "./Components/Profile.jsx";
+import Homepage from "./components/Homepage.jsx";
+import Programs from "./components/Programs.jsx";
+import Achievments from "./components/Achievments.jsx";
+import Workspace from "./components/Workspace.jsx";
+import CircuitVault from "./components/CircuitVault.jsx";
+import Userin from "./components/Userin.jsx";
+import Profile from "./components/Profile.jsx";
+
+// Context 
+import { ProductProvider } from "./components/context/ProductContext.jsx";
 
 // Premium (Added Value) Pages
-import ProjectManager from "./Components/Dev/ProjectManager.jsx";
-import EditProject from "./Components/Dev/EditProject.jsx";
-import OnlineSheets from "./Components/OnlineSheets.jsx";
-import Products from "./Components/Context/Products.jsx";
-import Cart from "./Components/Context/Cart.jsx";
+import ProjectManager from "./components/dev/ProjectManager.jsx";
+import EditProject from "./components/dev/EditProject.jsx";
+import OnlineSheets from "./components/OnlineSheets.jsx";
+import Products from "./components/Products.jsx";
+import Cart from "./components/Cart.jsx";
 
 // Fallback
-import NotFound from "./Components/NotFound.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/wattwizards-platform",
+    path: "/wattwizards-platform/",
     element: <MainLayout />,
     errorElement: <NotFound />,
     children: [

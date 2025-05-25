@@ -1,7 +1,8 @@
 import { faProjectDiagram, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { faPaperclip } from "@fortawesome/free-solid-svg-icons/faPaperclip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import features from "./Env/features.json";
+import features from "./env/features.json";
+import "../styles/Features.css";
 
 function Features() {
     return (

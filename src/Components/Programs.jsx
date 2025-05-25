@@ -1,18 +1,20 @@
-import CircuitBreaker from "./Package/Calcs/CircuitBreaker";
-import DataSetProgram from './Package/Calcs/DataSetProgram';
-import PowerFactorCorrection from "./Package/Calcs/PowerFactorCorrection";
-import ElectricalConsumption from "./Package/Calcs/ElectricalConsumption";
-import HorsePower2Ampere from "./Package/Calcs/HorsePowerToAmpere";
-import VoltAmpere2Watt from "./Package/Calcs/VoltAmpere2Watt";
-import Watt2Ampere from "./Package/Calcs/Watt2Ampere";
-import Ampere2Watt from "./Package/Calcs/Ampere2Watt";
-import HP2KWConverter from './Package/Calcs/HP2kW';
-import Coulomb from "./Package/Calcs/CoulombLaw";
-import Ohm from "./Package/Calcs/OhmLaw";
-import Kirchhoff from "./Package/Calcs/KirchhoffLaw";
-import Volta from "./Package/Calcs/VoltaLaw";
-import Ampere from "./Package/Calcs/AmpereLaw";
-import TonToHpConverter from './Package/Calcs/Ton2Hp';
+// Programs Pages
+import CircuitBreaker from "./projects/calcs/CircuitBreaker";
+import DataSetProgram from './projects/calcs/DataSetProgram';
+import PowerFactorCorrection from "./projects/calcs/PowerFactorCorrection";
+import ElectricalConsumption from "./projects/calcs/ElectricalConsumption";
+import HorsePower2Ampere from "./projects/calcs/HorsePowerToAmpere";
+import VoltAmpere2Watt from "./projects/calcs/VoltAmpere2Watt";
+import Watt2Ampere from "./projects/calcs/Watt2Ampere";
+import Ampere2Watt from "./projects/calcs/Ampere2Watt";
+import HP2KWConverter from './projects/calcs/HP2kW';
+import Coulomb from "./projects/calcs/CoulombLaw";
+import Ohm from "./projects/calcs/OhmLaw";
+import Kirchhoff from "./projects/calcs/KirchhoffLaw";
+import Volta from "./projects/calcs/VoltaLaw";
+import Ampere from "./projects/calcs/AmpereLaw";
+import TonToHpConverter from './projects/calcs/Ton2Hp';
+
 import { useRef, useState } from "react";
 
 function Programs() {

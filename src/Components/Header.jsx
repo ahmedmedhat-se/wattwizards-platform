@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import "../styles/Header.css";
 
 function Header() {
     const location = useLocation();

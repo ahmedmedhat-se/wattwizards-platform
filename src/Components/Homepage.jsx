@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Features from "./Features.jsx";
 import Programs from "./Programs.jsx";
 import SparkTalk from "./SparkTalk.jsx";
+import "../styles/Homepage.css";
 
 function Homepage() {
     return (
@@ -13,7 +14,7 @@ function Homepage() {
                             <h2>XOperations</h2>
                             <p className="fw-bold fs-5">
                                 “WattWizards—Egypt’s first all-in-one circuit analysis platform—turns complex engineering into click-and-go simplicity. 
-                                Built by PNTI Teams, it’s award-winning, globally ranked, and built to power precision, 
+                                Built by XOperations - Software Department, it’s award-winning, globally ranked, and built to power precision, 
                                 anywhere—online or off.”
                             </p>
                             <Link className="btn btn-primary"
