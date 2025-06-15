@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import data from './Env/data.json';
-import logo from './assets/logo.png';
+import data from '../env/data.json';
+import logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { faMailForward } from '@fortawesome/free-solid-svg-icons/faMailForward';
 
@@ -69,12 +69,13 @@ function Footer() {
                     </p>
                     <p className="text-light mb-2">
                         <FontAwesomeIcon icon={faMailForward} className="me-2" />
-                        contact@wattwizards.com
+                        <a href="mailto:xoperations.contact@gmail.com" target='_blank' 
+                        className="link-info">xoperations.contact@gmail.com</a>
                     </p>
                     <div className="links">
                         <a
                             href="https://www.linkedin.com/in/ahmed-medhat-ramadan-4061b7263"
-                            className="text-light me-4"
+                            className="me-4 link-info"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -83,7 +84,7 @@ function Footer() {
                         </a>
                         <a
                             href="https://www.linkedin.com/in/loucas-monir-b0a50b2b6"
-                            className="text-light"
+                            className="me-4 link-info"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

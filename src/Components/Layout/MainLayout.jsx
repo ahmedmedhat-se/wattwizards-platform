@@ -1,8 +1,8 @@
-import Header from "../Header.jsx"
-import SparkTalk from "../SparkTalk.jsx"
-import GoToTop from "../GoToTop.jsx"
-import Footer from "../Footer.jsx"
-import { Outlet } from "react-router-dom"
+import Header from "../main/Header.jsx";
+import SparkTalk from "../main/SparkTalk.jsx";
+import GoToTop from "../main/GoToTop.jsx";
+import Footer from "../main/Footer.jsx";
+import { Outlet } from "react-router-dom";
 
 function MainLayout() {
   return (

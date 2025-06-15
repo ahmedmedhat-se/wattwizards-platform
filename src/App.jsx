@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout.jsx";
 
 // Public Pages
-import Homepage from "./components/Homepage.jsx";
+import Homepage from "./components/main/Homepage.jsx";
 import Programs from "./components/Programs.jsx";
 import Achievments from "./components/Achievments.jsx";
 import Workspace from "./components/Workspace.jsx";
@@ -23,7 +23,7 @@ import Products from "./components/Products.jsx";
 import Cart from "./components/Cart.jsx";
 
 // Fallback
-import NotFound from "./components/NotFound.jsx";
+import NotFound from "./components/main/NotFound.jsx";
 
 const router = createBrowserRouter([
   {

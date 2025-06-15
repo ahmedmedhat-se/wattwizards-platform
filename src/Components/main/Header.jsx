@@ -5,10 +5,19 @@ import "../styles/Header.css";
 function Header() {
     const location = useLocation();
     const navigate = useNavigate();
+    const [scrolled, setScrolled] = useState(false);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredResults, setFilteredResults] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     useEffect(() => {
         const cookies = document.cookie.split('; ');
@@ -19,7 +28,7 @@ function Header() {
     const handleLogout = () => {
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         setIsLoggedIn(false);
-        navigate('/wattwizards-platform');    
+        navigate('/wattwizards-platform');
     };
 
     const routes = [
@@ -73,40 +82,40 @@ function Header() {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark p-4 fixed-top shadow-sm">
+        <nav className={`navbar navbar-expand-lg p-4 shadow-sm fixed-top header-nav ${scrolled ? "scrolled" : ""}`}>
             <div className="container">
                 <Link className='navbar-brand text-light' to='/wattwizards-platform'>
                     <strong>Watt<span>Wizards</span></strong>
                 </Link>
-                <button 
-                    className="navbar-toggler" 
-                    type="button" 
-                    data-bs-toggle="offcanvas" 
-                    data-bs-target="#offcanvasNavbar" 
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar"
                     aria-label="Toggle navigation"
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <div className="offcanvas offcanvas-end text-light" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div className="offcanvas-header">
                         <h5 className="offcanvas-title" id="offcanvasNavbarLabel">WattWizards</h5>
-                        <button 
-                            type="button" 
-                            className="btn-close btn-close-white" 
-                            data-bs-dismiss="offcanvas" 
+                        <button
+                            type="button"
+                            className="btn-close btn-close-white"
+                            data-bs-dismiss="offcanvas"
                             aria-label="Close"
                         ></button>
                     </div>
 
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        {routes.map((route, index) => (
+                            {routes.map((route, index) => (
                                 <li className="nav-item" key={index}>
-                                    <Link 
-                                        className="nav-link text-light text-uppercase" 
-                                        to={route.path} 
+                                    <Link
+                                        className="nav-link text-light text-uppercase"
+                                        to={route.path}
                                         onClick={route.name === 'Logout' ? handleLogout : undefined}
                                     >
                                         {route.name}
@@ -130,9 +139,9 @@ function Header() {
                                 <ul className="list-group position-absolute bg-white shadow w-100 rounded" style={{ top: '100%', left: 0, zIndex: 1050 }}>
                                     {filteredResults.length > 0 ? (
                                         filteredResults.map((result, index) => (
-                                            <li 
-                                                className={`list-group-item list-group-item-action ${selectedIndex === index ? 'bg-primary text-light' : ''}`} 
-                                                key={index} 
+                                            <li
+                                                className={`list-group-item list-group-item-action ${selectedIndex === index ? 'bg-primary text-light' : ''}`}
+                                                key={index}
                                                 onClick={() => handleSearchSelect(result.path)}
                                                 onMouseEnter={() => handleMouseEnter(index)}
                                                 style={{ cursor: 'pointer' }}
@@ -141,9 +150,9 @@ function Header() {
                                             </li>
                                         ))
                                     ) : (
-                                        <li 
+                                        <li
                                             className="list-group-item list-group-item-action text-muted"
-                                            onClick={() => handleSearchSelect('/not-found')} 
+                                            onClick={() => handleSearchSelect('/not-found')}
                                             style={{ cursor: 'pointer' }}
                                         >
                                             No results found

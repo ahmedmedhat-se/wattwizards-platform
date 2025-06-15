@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import Features from "./Features.jsx";
-import Programs from "./Programs.jsx";
+import Features from "../Features.jsx";
+import Programs from "../Programs.jsx";
 import SparkTalk from "./SparkTalk.jsx";
-import "../styles/Homepage.css";
 
 function Homepage() {
     return (

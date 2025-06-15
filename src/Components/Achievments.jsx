@@ -64,7 +64,7 @@ function Achievments() {
                     {/* <!-- BASEF Program Ends --> */}
                     {/* <!-- IEEE Program Starts --> */}
                     <div className="cards-lg-containers-card">
-                        <img src="https://i.ytimg.com/vi/wHz12mg5MQ4/maxresdefault.jpg" />
+                        <img src="https://scontent.fcai19-8.fna.fbcdn.net/v/t39.30808-6/481970727_522038784260671_6311098493098016517_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yWT1jTTFMxYQ7kNvwHWbFSz&_nc_oc=AdkYpv9zFE8r6AuG8tr6OMzIYI5Wm_ZF3FDtsX-6oHsrseYKjBqhMsvCfaKN_vJ28yU&_nc_zt=23&_nc_ht=scontent.fcai19-8.fna&_nc_gid=F_OYaQkPNHMo8pmI1FKbog&oh=00_AfPsA3VMNaZsS0L84m0bdByUIpDeDbsCn6RyJY61Eae-7A&oe=68536724" />
                         <h2 className="course-title">IEEE YESIST12 Junior Einstein</h2>
                         <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#IEEE">View</button>
                     </div>
@@ -174,7 +174,7 @@ function Achievments() {
                     {/* <!-- Mini Shark Tank Egypt Program Starts --> */}
                     <div className="cards-lg-containers-card">
                         <img
-                            src="https://www.kashqol.com/UploadCache/libfiles/27/6/600x338o/617.jpeg" />
+                            src="https://powernews.cc/wp-content/uploads/2025/05/IMG-20250515-WA0043-scaled.jpg" />
                         <h2 className="course-title">Mini Shark Tank Egypt</h2>
                         <button type="button" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#SUTech">View</button>
                     </div>

@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import logo from '../assets/logo.png';
 
 function CircuitBreaker() {
@@ -66,7 +66,7 @@ function CircuitBreaker() {
         }
 
         if (BreakerData[CBB] && CBB.toFixed(2) <= 6300) {
-            setCbSize(`The available circuit-breaker to use is ${BreakerData[CBB]} قاطع التيار المناسب هو`);
+            setCbSize(`The available circuit-breaker to use is ${BreakerData[CBB]}`);
         } else {
             setCbSize(`The Circuit-Breaker is out of range, you can ask a technician or ask our SparkTalk`);
         }
@@ -82,7 +82,7 @@ function CircuitBreaker() {
         }
 
         if (CableData[CBC] && CBC <= 300) {
-            setCableThickness(`The Cable thickness to use is ${CableData[CBC]}mm² - سُمك الكابل المناسب هو`);
+            setCableThickness(`The Cable thickness to use is ${CableData[CBC]}mm²`);
         } else {
             setCableThickness(`The Cable current is out of range, you can ask a technician or you can ask our SparkTalk`);
         }
@@ -114,14 +114,14 @@ function CircuitBreaker() {
             let VDresult = (Sarea * result * lossV) / 1000;
             let percentage = phaserChecked ? (VDresult / 380) * 100 : (VDresult / 220) * 100;
             if (percentage.toFixed() < 5) {
-                setVoltageDropPercentage(`The voltage drop percentage ${percentage.toFixed(2)} نسبه هبوط الجهد هي`);
-                setCheckMessage("Use the current circuit breaker and the cable thickness you have - استخدم قاطع التيار وسمك الكابل المتوفر أمامك");
+                setVoltageDropPercentage(`The voltage drop percentage ${percentage.toFixed(2)}`);
+                setCheckMessage("Use the current circuit breaker and the cable thickness you have");
             } else {
                 let num = 1;
                 for (const indexer in CableData) {
                     if (num === 0) {
                         lossVoltCalc(CableData[indexer]);
-                        setCheckMessage(`The Cable thickness to use is ${CableData[indexer]}mm² - سُمك الكابل المناسب هو`);
+                        setCheckMessage(`The Cable thickness to use is ${CableData[indexer]}mm²`);
                     } else {
                         if (Sarea === CableData[indexer]) {
                             num -= 1;
@@ -161,7 +161,7 @@ function CircuitBreaker() {
                             </button>
                         </div>
                         <div className="modal-body">
-                            <h2 className="HeaderStyleH2">Circuit Breaker - قاطع التيار</h2><br />
+                            <h2 className="HeaderStyleH2">Circuit Breaker</h2><br />
                             <p>
                                 The circuit breaker or circuit breaker (collectively, electrical breakers)<br />
                                 is an electrical safety switch that works automatically to protect electrical
@@ -217,23 +217,23 @@ function CircuitBreaker() {
                             <div className="container-fluid">
                                 <div className="row d-flex justify-content-center align-items-center">
                                     <div className="col-10 p-2 mt-2">
-                                        <form action="#" autoComplete="on" onSubmit={handleSubmit}>
+                                        <form autoComplete="on" onSubmit={handleSubmit}>
                                             <span>
-                                                <label htmlFor="machine" className="form-label">Appliances - الأجهزه :</label>
+                                                <label htmlFor="machine" className="form-label">Appliances</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Enter the number of the appliances - ادخل عدد الأجهزه"
+                                                    placeholder="Enter the number of the appliances"
                                                     id="machine"
                                                     className="form-control"
                                                     value={numMachine}
                                                     onChange={(e) => setNumMachine(e.target.value)}
                                                 /><br />
 
-                                                <label htmlFor="watt" className="form-label">Power - القدره</label>
+                                                <label htmlFor="watt" className="form-label">Power</label>
                                                 <div className="input-group mb-3">
                                                     <input
                                                         type="text"
-                                                        placeholder="Power - القدره"
+                                                        placeholder="Power"
                                                         id="watt"
                                                         className="form-control"
                                                         value={watt}
@@ -242,14 +242,14 @@ function CircuitBreaker() {
                                                     <div className="input-group-append">
                                                         <select
                                                             name="watt"
-                                                            className="form-control"
+                                                            className="form-select"
                                                             id="unitwatt"
                                                             value={unitWatt}
                                                             onChange={(e) => setUnitWatt(e.target.value)}
                                                         >
-                                                            <option value="watt">Watt - وات</option>
-                                                            <option value="kw">Kilo Watt - كيلو وات</option>
-                                                            <option value="hp">Horse Power - حصان</option>
+                                                            <option value="watt">Watt</option>
+                                                            <option value="kw">Kilo Watt</option>
+                                                            <option value="hp">Horse Power</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -262,23 +262,23 @@ function CircuitBreaker() {
                                                         checked={phaserChecked}
                                                         onChange={(e) => setPhaserChecked(e.target.checked)}
                                                     />
-                                                    <label htmlFor="phaser" className="text-dark">3 phases - ثلاثه فاز</label>
+                                                    <label htmlFor="phaser" className="text-dark">3 phases</label>
                                                 </div><br />
 
-                                                <label htmlFor="voltage" className="form-label">Voltage - الفولت :</label>
+                                                <label htmlFor="voltage" className="form-label">Voltage</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Volat - الفولت"
+                                                    placeholder="Voltage"
                                                     id="voltage"
                                                     className="form-control"
                                                     value={voltage}
                                                     onChange={(e) => setVoltage(e.target.value)}
                                                 /><br />
 
-                                                <label htmlFor="pf" className="form-label">Power Factor - عامل القدره :</label>
+                                                <label htmlFor="pf" className="form-label">Power Factor</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="P.F. - معامل القدرة"
+                                                    placeholder="Power Factor"
                                                     id="pf"
                                                     className="form-control"
                                                     value={pf}
@@ -291,59 +291,60 @@ function CircuitBreaker() {
                                                         className="btn btn-success"
                                                         style={{ width: "100%", fontSize: "large" }}
                                                     >
-                                                        Calculate - احسب
+                                                        Calculate
                                                     </button>
                                                 </div><br />
 
-                                                <label htmlFor="current" className="form-label">Current - التيار</label>
+                                                <label htmlFor="current" className="form-label">Current</label>
                                                 <input
                                                     type="text"
                                                     id="current"
                                                     className="form-control"
-                                                    placeholder="Current - التيار :"
+                                                    placeholder="Current"
                                                     value={currentResult}
                                                     readOnly
                                                 /><br />
 
-                                                <label htmlFor="cb" className="form-label">CB Size - حجم قاطع التيار</label>
+                                                <label htmlFor="cb" className="form-label">Circuit Breaker Size</label>
                                                 <input
                                                     type="text"
                                                     id="cb"
                                                     className="form-control"
-                                                    placeholder="CB Size - حجم قاطع التيار"
+                                                    placeholder="Circuit Breaker Size"
                                                     value={cbSize}
                                                     readOnly
                                                 /><br />
 
-                                                <label htmlFor="ct" className="form-label">Cable Thickness - مساحه الكابل</label>
+                                                <label htmlFor="ct" className="form-label">Cable Thickness</label>
                                                 <input
                                                     type="text"
                                                     id="ct"
                                                     className="form-control"
-                                                    placeholder="Cable Thickness - مساحه الكابل"
+                                                    placeholder="Cable Thickness"
                                                     value={cableThickness}
                                                     readOnly
                                                 /><br />
 
-                                                <label htmlFor="v" className="form-label">Voltage Drop Percentage - نسبه هبوط الجهد</label>
+                                                <label htmlFor="v" className="form-label">Voltage Drop Percentage</label>
                                                 <input
                                                     type="text"
                                                     id="v"
                                                     className="form-control"
-                                                    placeholder="V.D Percentage - نسبه هبوط الجهد"
+                                                    placeholder="V.D Percentage"
                                                     value={voltageDropPercentage}
                                                     readOnly
                                                 /><br />
 
                                                 <label htmlFor="ch" className="form-label">Check</label>
-                                                <input
-                                                    type="text"
+                                                <textarea
+                                                    name="ch"
                                                     id="ch"
                                                     className="form-control"
                                                     placeholder="Check"
                                                     value={checkMessage}
                                                     readOnly
-                                                /><br />
+                                                    rows={2}>
+                                                </textarea><br />
                                             </span>
                                         </form>
 

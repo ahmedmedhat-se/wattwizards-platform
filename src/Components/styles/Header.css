@@ -9,6 +9,24 @@ nav .navbar-brand strong, .navbar .offcanvas-end .offcanvas-title {
   font-family: 'Orbitron', sans-serif;
 }
 
+.header-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1030;
+  transition: all 0.3s ease;
+  padding: 1rem;
+}
+
+.header-nav.scrolled {
+  width: calc(100% - 2rem);
+  margin: 0.5rem auto;
+  border-radius: 50px;
+  box-shadow: var(--shadow-md);
+  padding: 0.75rem 1rem !important;
+}
+
 nav .navbar-brand strong span {
   color: #0066ff;
   font-size: 22px;
@@ -23,7 +41,7 @@ nav .offcanvas-body .navbar-nav .nav-item .nav-link {
 
 nav .navbar-toggler {
   background: rgb(30, 0, 36);
-  background: linear-gradient(90deg, rgb(44, 10, 136) 0%, rgb(83, 3, 99) 100%);
+  background: linear-gradient(90deg, rgb(137, 125, 169) 0%, rgb(40, 44, 134) 100%);
   border: none;
   font-size: 22px;
 }

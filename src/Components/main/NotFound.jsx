@@ -1,5 +1,4 @@
 import axios from 'axios';
-import React from 'react';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import { Link } from 'react-router-dom';

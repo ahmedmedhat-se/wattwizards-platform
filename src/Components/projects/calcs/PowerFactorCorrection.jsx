@@ -164,80 +164,85 @@ function PowerFactorCorrection() {
                                     <div className="col-10 p-2 mt-2">
                                         <form autoComplete="on">
                                             <span>
-                                                <label htmlFor="power" className="form-label">Power - القدره</label>
+                                                <label htmlFor="power" className="form-label">Power Needed:</label>
                                                 <div className="input-group mb-3">
-                                                    <input type="text" placeholder="القدره" id="power" ref={powerRef} required
+                                                    <input type="text" placeholder="Enyter the power" id="power" ref={powerRef} required
                                                         className="form-control" />
                                                     <div className="input-group-append">
-                                                        <select style={{ fontWeight: "bold" }} className="form-control"
+                                                        <select className="form-select fw-bold"
                                                             name="powerSelection" id="powerSelection" ref={powerSelectionRef}>
-                                                            <option value="amp">Ampere - أمبير</option>
-                                                            <option value="kw">KW (Single Phase) - كيلووات 1 فاز
-                                                            </option>
-                                                            <option value="kw3">KW (3 Phase) - كيلووات 3 فاز</option>
-                                                            <option value="hp">Hp (Single Phase) - (واحد فاز) حصان
-                                                            </option>
-                                                            <option value="hp3">Hp (3 Phase) - (ثلاثه فاز) حصان</option>
+                                                            <option value="amp">Ampere</option>
+                                                            <option value="kw">KW (Single Phase)</option>
+                                                            <option value="kw3">KW (3 Phase)</option>
+                                                            <option value="hp">Hp (Single Phase)</option>
+                                                            <option value="hp3">Hp (3 Phase)</option>
                                                         </select>
                                                     </div>
                                                 </div>
 
-                                                <input type="text"
-                                                    placeholder="The efficiency (hp) % - (حصان) الكفائه" id="eff" ref={efficiencyRef}
-                                                    className="form-control" /><br />
-
-                                                <label htmlFor="pfOld" className="form-label">Old/New Power Factor - معامل
-                                                    القدره القديم/الجديد</label>
-                                                <div className="input-group">
-                                                    <div className="input-group-prepend">
-                                                        <span className="input-group-text"
-                                                            style={{ fontWeight: "bold" }}>Old/New P.F.</span>
-                                                    </div>
-                                                    <input type="text" placeholder="Old - القديم" id="pfOld" ref={pfOldRef} required
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="eff" className='form-label'>Efficiency of Horse Power: </label>
+                                                    <input type="text"
+                                                        placeholder="The efficiency (hp) in % " id="eff" ref={efficiencyRef}
                                                         className="form-control" />
-                                                    <input type="text" placeholder="New - الجديد" id="pfNew" ref={pfNewRef}
-                                                        className="form-control" required />
-                                                </div><br />
+                                                </div>
 
-                                                <label htmlFor="Vrms" className="form-label">VRMS/Frequency - ادخل الجهد
-                                                    والتردد</label>
-                                                <div className="input-group">
-                                                    <div className="input-group-prepend">
-                                                        <span className="input-group-text"
-                                                            style={{ fontWeight: "bold" }}>VRMS/Freq</span>
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="pfOld" className="form-label">Old/New Power Factor</label>
+                                                    <div className="input-group">
+                                                        <div className="input-group-prepend">
+                                                            <span className="input-group-text fw-bold">Old/New P.F.</span>
+                                                        </div>
+                                                        <input type="text" placeholder="Old" id="pfOld" ref={pfOldRef} required
+                                                            className="form-control" />
+                                                        <input type="text" placeholder="New" id="pfNew" ref={pfNewRef}
+                                                            className="form-control" required />
                                                     </div>
-                                                    <input type="text" placeholder="VRMS - الجهد" id="Vrms" ref={VRMSRef}
-                                                        className="form-control" required />
-                                                    <input type="text" placeholder="Freq - التردد" id="freq" ref={frequencyRef}
-                                                        className="form-control" required />
-                                                </div><br />
+                                                </div>
 
-                                                <div className="div">
-                                                    <button id="PFCaclc" onClick={handlePFCaclcClick} className="btn btn-success w-100"
-                                                        style={{ fontSize: "large" }}>
-                                                        Calculate - احسب</button>
-                                                </div><br />
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="Vrms" className="form-label">VRMS/Frequency </label>
+                                                    <div className="input-group">
+                                                        <div className="input-group-prepend">
+                                                            <span className="input-group-text fw-bold">VRMS/Freq</span>
+                                                        </div>
+                                                        <input type="text" placeholder="VRMS" id="Vrms" ref={VRMSRef}
+                                                            className="form-control" required />
+                                                        <input type="text" placeholder="Freq" id="freq" ref={frequencyRef}
+                                                            className="form-control" required />
+                                                    </div>
+                                                </div>
 
-                                                <label htmlFor="active" className="form-label">Active Power (kw) - القدره
-                                                    الفعاله</label>
-                                                <input type="number" readOnly id="active" value={resultsPF.active} className="form-control"
-                                                    placeholder="Active Power (kw) - القدره الفعاله :" /><br />
+                                                <div className="div container-fluid mb-3 p-0">
+                                                    <button id="PFCaclc" onClick={handlePFCaclcClick} className="btn btn-success w-100 fs-5">
+                                                        Calculate</button>
+                                                </div>
 
-                                                <label htmlFor="apparent" className="form-label">Apparent Power (kVA) - القدره
-                                                    الظاهره</label>
-                                                <input type="number" readOnly id="apparent" value={resultsPF.apparent} className="form-control"
-                                                    placeholder="Apparent Power (kVA) - القدره الظاهره :" /><br />
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="active" className="form-label">Active Power (kw):</label>
+                                                    <input type="number" readOnly id="active" value={resultsPF.active} className="form-control"
+                                                        placeholder="Active Power (kw)" />
+                                                </div>
 
-                                                <label htmlFor="reactive" className="form-label">Reactive Power (kVAR) - القدره الغير
-                                                    فعاله</label>
-                                                <input type="number" readOnly id="reactive" value={resultsPF.reactive} className="form-control"
-                                                    placeholder="Reactive Power (kVAR) - القدره الغير فعاله :" /><br />
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="apparent" className="form-label">Apparent Power (kVA):</label>
+                                                    <input type="number"
+                                                        readOnly id="apparent" value={resultsPF.apparent}
+                                                        className="form-control"
+                                                        placeholder="Apparent Power (kVA)" />
+                                                </div>
 
-                                                <label htmlFor="microFarad" className="form-label">The capacitance of the
-                                                    capacitor is in microfarads µF
-                                                    - سعة المكثف بوحدة الميكروفاراد</label>
-                                                <input type="number" readOnly id="microFarad" value={resultsPF.microFarad} className="form-control"
-                                                    placeholder="The capacitance of the capacitor is in microfarads µF - سعة المكثف بوحدة الميكروفاراد μF :" /><br />
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="reactive" className="form-label">Reactive Power (kVAR):</label>
+                                                    <input type="number" readOnly id="reactive" value={resultsPF.reactive} className="form-control"
+                                                        placeholder="Reactive Power (kVAR)" />
+                                                </div>
+
+                                                <div className="container-fluid mb-3 p-0">
+                                                    <label htmlFor="microFarad" className="form-label">The capacitance of the capacitor is in microfarads:</label>
+                                                    <input type="number" readOnly id="microFarad" value={resultsPF.microFarad} className="form-control"
+                                                        placeholder="The capacitance of the capacitor is in microfarads µF" />
+                                                </div>
                                             </span>
                                         </form>
                                     </div>

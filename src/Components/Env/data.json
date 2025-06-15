@@ -1,10 +1,10 @@
 {
     "company": {
-        "name": "WattWizards",
+        "name": "XOperations",
         "description": "WattWizards presents, a platform that simplifies complex scientific concepts. We break down technical jargon and make science easy to understand for learners and professionals alike, turning complicated ideas into clear, accessible knowledge for all.",
         "contact": {
             "phone": "+01000000000",
-            "address": "Alexandria, Egypt"
+            "address": "Egypt, Alexandria"
         }
     },
     "services": {
