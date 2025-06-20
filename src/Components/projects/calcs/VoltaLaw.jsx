@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/logo.png';
+import image from "../assets/images/Volta.jpg";
 
 function Volta() {
     // Volta's Law (Program) Starts
@@ -48,7 +49,7 @@ function Volta() {
     return (
         <>
             <div className="cards-lg-containers-card">
-                <img src="https://media.sciencephoto.com/c0/07/49/64/c0074964-800px-wm.jpg" />
+                <img src={image} />
                 <div className="category">
                     <div className="subject">
                         <h3>Software/Physics</h3>

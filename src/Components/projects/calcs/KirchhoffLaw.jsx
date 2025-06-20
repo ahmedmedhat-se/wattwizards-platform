@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/logo.png';
+import image from "../assets/images/Gustav_Robert_Kirchhoff.jpg";
 
 function Kirchhoff() {
     // Kirchhoff's Law (Program) Starts
@@ -30,7 +31,7 @@ function Kirchhoff() {
     return (
         <>
             <div className="cards-lg-containers-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Gustav_Robert_Kirchhoff.jpg" />
+                <img src={image} />
                 <div className="category">
                     <div className="subject">
                         <h3>Software/Physics</h3>

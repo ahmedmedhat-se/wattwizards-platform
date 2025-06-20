@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/logo.png';
+import image from "../assets/images/Gerog_Ohm.jpg";
 
 function Ohm() {
     // Ohm's Law (Program) Starts
@@ -38,7 +39,7 @@ function Ohm() {
     return (
         <>
             <div className="cards-lg-containers-card">
-                <img src="https://www.thoughtco.com/thmb/yanPjyDodf3W1LHWrL1gzfma1qk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/713px-Gerog_Ohm-58e5d5dc5f9b58ef7e244457.jpg" />
+                <img src={image} />
                 <div className="category">
                     <div className="subject">
                         <h3>Software/Physics</h3>

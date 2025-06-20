@@ -6,6 +6,7 @@ import data from '../env/data.json';
 import logo from '../assets/logo.png';
 import { Link, useLocation } from 'react-router-dom';
 import { faMailForward } from '@fortawesome/free-solid-svg-icons/faMailForward';
+import "../styles/footer.css";
 
 function Footer() {
     const location = useLocation();
@@ -94,7 +95,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="text-center mt-5 border-top p-2 text-light">
+            <div className="text-center mt-5 border-top pt-4 text-light">
                 <p>
                     © {new Date().getFullYear()} {data.company.name}. All rights reserved.
                 </p>

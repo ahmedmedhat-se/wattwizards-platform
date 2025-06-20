@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import "../styles/Header.css";
+import "../styles/header.css";
 
 function Header() {
     const location = useLocation();
@@ -34,9 +34,7 @@ function Header() {
     const routes = [
         { path: 'programs', name: 'Programs' },
         { path: 'workspace', name: 'Workspace' },
-        { path: 'products', name: 'Products' },
-        { path: 'profile', name: 'Profile' },
-        { path: isLoggedIn ? '/wattwizards-platform' : '/wattwizards-platform/login', name: isLoggedIn ? 'Logout' : 'Login' },
+        { path: 'products', name: 'Products' }
     ];
 
     useEffect(() => {
@@ -125,7 +123,7 @@ function Header() {
                         </ul>
 
                         {/* Search Bar */}
-                        <div className="position-relative">
+                        <div className="position-relative me-2 position-relative w-100 w-lg-auto">
                             <input
                                 className="form-control bg-light text-dark"
                                 type="search"
@@ -159,6 +157,22 @@ function Header() {
                                         </li>
                                     )}
                                 </ul>
+                            )}
+                        </div>
+
+                        {/* Icons */}
+                        <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+                            <Link to="/wattwizards-platform/profile" className="text-light fs-5" title="Profile">
+                                <i className="fas fa-user"></i>
+                            </Link>
+                            {isLoggedIn ? (
+                                <span className="text-light fs-5" style={{ cursor: 'pointer' }} onClick={handleLogout} title="Logout">
+                                    <i className="fas fa-door-closed"></i>
+                                </span>
+                            ) : (
+                                <Link to="/wattwizards-platform/login" className="text-light fs-5" title="Login">
+                                    <i className="fas fa-door-open"></i>
+                                </Link>
                             )}
                         </div>
                     </div>

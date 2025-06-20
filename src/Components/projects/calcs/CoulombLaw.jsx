@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/logo.png';
+import image from "../assets/images/Charles_de_Coulomb.png";
 
 function Coulomb() {
     // CoulombsLaw (Program) Starts
@@ -29,7 +30,7 @@ function Coulomb() {
     return(
         <>
             <div className="cards-lg-containers-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Charles_de_Coulomb.png/800px-Charles_de_Coulomb.png" />
+                <img src={image} />
                 <div className="category">
                     <div className="subject">
                         <h3>Software/Physics</h3>

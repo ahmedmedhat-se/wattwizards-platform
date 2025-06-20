@@ -1,0 +1,13 @@
+/* Footer Component Styling Starts */
+footer {
+  background-color: #071324;
+}
+
+footer h5 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+footer .links a{
+  text-decoration: none;
+}
+/* Footer Component Styling Ends */

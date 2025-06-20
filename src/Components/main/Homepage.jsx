@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import Features from "../Features.jsx";
-import Programs from "../Programs.jsx";
+import Features from "../services/Features.jsx";
+import Programs from "../services/Programs.jsx";
 import SparkTalk from "./SparkTalk.jsx";
+import "../styles/hompage.css";
+import logo from "../assets/logo.png";
 
 function Homepage() {
     return (
@@ -16,12 +18,12 @@ function Homepage() {
                                 Built by XOperations - Software Department, it’s award-winning, globally ranked, and built to power precision, 
                                 anywhere—online or off.”
                             </p>
-                            <Link className="btn btn-primary"
+                            <Link className="btn achievments-link btn-primary"
                             to={"/wattwizards-platform/achievments"}>Explore Our Achievments!</Link>
                         </div>
                         <div className="XOperations-img">
                             <div className="XOperations-img-container">
-                                <img src="https://img.freepik.com/premium-photo/electrical-engineer-hd-image_1012565-6359.jpg" />
+                                <img src={logo} />
                             </div>
                         </div>
                         <div className="box">

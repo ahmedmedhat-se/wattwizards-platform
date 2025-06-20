@@ -1,51 +1,74 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/SparkTalk.css";
+import "../styles/spark-talk.css";
 
 const SparkTalk = () => {
     const [isChatVisible, setIsChatVisible] = useState(false);
     const [userInput, setUserInput] = useState("");
     const [messages, setMessages] = useState([
-        { content: "Welcome! Type 'help' for commands or enter a '/path' to navigate.", className: "incoming" },
+        {
+            content: "Welcome! Type 'help' for commands or enter a '/path' to navigate.",
+            className: "incoming",
+            timestamp: new Date().toLocaleString(undefined, {
+                weekday: 'short',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true,
+            }),
+        },
     ]);
 
     const navigate = useNavigate();
 
     const routes = [
         { path: '/wattwizards-platform', name: 'Home' },
-        { path: '/wattwizards-platform', name: 'WattWizards' },
         { path: '/wattwizards-platform/programs', name: 'Programs' },
-        { path: '/workspace', name: 'Workspace' },
-        { path: '/vault', name: 'CircuitVault' },
-        { path: '/login', name: 'Login' },
-        { path: '/profile', name: 'Profile' },
-        { path: '/project', name: 'DevSync' },
-        { path: '/project', name: 'Project' },
-        { path: '/products', name: 'Product' },
-        { path: '/cart', name: 'Cart' },
+        { path: '/wattwizards-platform/workspace', name: 'Workspace' },
+        { path: '/wattwizards-platform/vault', name: 'CircuitVault' },
+        { path: '/wattwizards-platform/login', name: 'Login' },
+        { path: '/wattwizards-platform/profile', name: 'Profile' },
+        { path: '/wattwizards-platform/project', name: 'DevSync' },
+        { path: '/wattwizards-platform/products', name: 'Product' },
+        { path: '/wattwizards-platform/cart', name: 'Cart' },
     ];
 
     const predefinedCommands = {
+        hi: "Hi, I am SparkTalk if you need my help, just type help.",
         help: "Commands: 'help', 'about', 'contact', 'exit', 'manual'. You can also enter '/path' to navigate.",
         about: "I am SparkTalk, your assistant for navigating WattWizards and providing guidance.",
-        contact: "For support, email us at support@example.com.",
+        contact: "For support, email us at xoperations.contact@gmail.com",
         exit: "Thanks for chatting! Have a great day!",
-        manual: `WattWizards User Manual:\n1. Navigate to 'Programs' for calculations.\n2. Use 'Workspace' to upload/download files.\n3. Manage data in 'CircuitVault'.\n4. Ensure stable internet for real-time features.\n5. Contact support for troubleshooting.`
+        manual: `WattWizards User Manual:\n1. Navigate to 'Programs' for calculations.\n2. Use 'Workspace' to upload/download files.\n3. Manage data in 'CircuitVault'.\n4. Ensure stable internet for real-time features.\n5. Contact support for troubleshooting.`,
     };
 
-    const createBotList = (message, className) => ({ content: message, className });
+    const createBotList = (message, className) => {
+        const now = new Date();
+        const timestamp = now.toLocaleString(undefined, {
+            weekday: 'short',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: true,
+        });
+        return { content: message, className, timestamp };
+    };
 
     const handleCommand = (command) => {
         if (command.startsWith("/")) {
-            const route = routes.find(r => r.path === command);
+            const routePath = `/wattwizards-platform${command}`;
+            const route = routes.find(r => r.path === routePath);
+
             if (route) {
                 navigate(route.path);
                 setMessages(prev => [...prev, createBotList(`Navigating to ${route.name}...`, "incoming")]);
                 return;
             }
         }
+
         const response = predefinedCommands[command.toLowerCase()];
-        setMessages(prev => [...prev, createBotList(response || "Unknown command. Type 'help'.", "incoming")]);
+        setMessages(prev => [
+            ...prev,
+            createBotList(response || "Unknown command. Type 'help'.", "incoming"),
+        ]);
     };
 
     const handleSend = () => {
@@ -56,7 +79,7 @@ const SparkTalk = () => {
     };
 
     const handleKeyDown = (event) => {
-        if (event.key === 'Enter') {
+        if (event.key === "Enter") {
             event.preventDefault();
             handleSend();
         }
@@ -82,13 +105,18 @@ const SparkTalk = () => {
                 <div className="SparkTalk">
                     <header>
                         <h2>SparkTalk</h2>
-                        <button className="close-chat-btn" onClick={toggleChatVisibility}>&#10005;</button>
+                        <button className="close-chat-btn" onClick={toggleChatVisibility}>
+                            &#10005;
+                        </button>
                     </header>
                     <ul className="electrochat" ref={chatContainerRef}>
                         {messages.map((msg, index) => (
                             <li key={index} className={`message ${msg.className}`}>
                                 {msg.className === "incoming" && <span className="far fa-comment-alt"></span>}
-                                <p>{msg.content}</p>
+                                <div>
+                                    <p>{msg.content}</p>
+                                    <small className="timestamp">{msg.timestamp}</small>
+                                </div>
                             </li>
                         ))}
                     </ul>

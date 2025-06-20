@@ -1,0 +1,14 @@
+/* Profile Component Styling Starts */
+.user-profile {
+  margin-top: 100px;
+}
+
+.user-profile .card {
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.user-profile h4, .user-profile h5 {
+  font-family: 'Orbitron', sans-serif;
+}
+/* Profile Component Styling Starts */

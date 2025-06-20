@@ -1,12 +1,13 @@
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from '../assets/logo.png';
+import image from "../assets/images/Ampere.jpg";
 
 function Ampere() {
     return (
         <>
             <div className="cards-lg-containers-card">
-                <img src="https://media.sciencephoto.com/h4/01/01/99/h4010199-800px-wm.jpg" />
+                <img src={image} />
                 <div className="category">
                     <div className="subject">
                         <h3>Software/Physics</h3>
